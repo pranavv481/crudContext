@@ -27,7 +27,7 @@ const TodoReducer = (state, action) => {
                 currentTodo: action.payload
             }
 
-        case UPDATE_TODO:
+        case COMPLETE_TODO:
             return {
                 ...state,
                 todos: state.todos.map((todo) => todo.id == action.payload ? Object.assign(todo, { completed: true }) : todo)
